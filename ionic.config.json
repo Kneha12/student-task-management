@@ -1,0 +1,7 @@
+{
+  "name": "student-task-manager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
