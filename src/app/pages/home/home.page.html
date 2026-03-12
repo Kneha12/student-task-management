@@ -1,42 +1,37 @@
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar color="danger">
-      <ion-title>Menu Content</ion-title>
+      <ion-title>Academic Pro</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list-header>
-      <ion-label>Academic</ion-label>
-    </ion-list-header>
+    <ion-list-header><ion-label>Academic</ion-label></ion-list-header>
     <ion-list lines="none">
-      <ion-item button>
-        <ion-icon name="grid-outline" slot="start"></ion-icon>
-        <ion-label>Dashboard</ion-label>
-      </ion-item>
-      <ion-item button>
-        <ion-icon name="book-outline" slot="start"></ion-icon>
-        <ion-label>Courses</ion-label>
-      </ion-item>
-      <ion-item button>
-        <ion-icon name="calendar-number-outline" slot="start"></ion-icon>
-        <ion-label>Deadlines</ion-label>
-      </ion-item>
+      <ion-item button
+        ><ion-icon name="grid-outline" slot="start"></ion-icon
+        ><ion-label>Dashboard</ion-label></ion-item
+      >
+      <ion-item button
+        ><ion-icon name="book-outline" slot="start"></ion-icon
+        ><ion-label>Courses</ion-label></ion-item
+      >
+      <ion-item button
+        ><ion-icon name="calendar-number-outline" slot="start"></ion-icon
+        ><ion-label>Deadlines</ion-label></ion-item
+      >
     </ion-list>
 
-    <ion-list-header>
-      <ion-label>Tools</ion-label>
-    </ion-list-header>
+    <ion-list-header><ion-label>Tools</ion-label></ion-list-header>
     <ion-list lines="none">
-      <ion-item button>
-        <ion-icon name="timer-outline" slot="start"></ion-icon>
-        <ion-label>Focus Timer</ion-label>
-      </ion-item>
-      <ion-item button>
-        <ion-icon name="stats-chart-outline" slot="start"></ion-icon>
-        <ion-label>Grade Tracker</ion-label>
-      </ion-item>
+      <ion-item button
+        ><ion-icon name="timer-outline" slot="start"></ion-icon
+        ><ion-label>Focus Timer</ion-label></ion-item
+      >
+      <ion-item button
+        ><ion-icon name="stats-chart-outline" slot="start"></ion-icon
+        ><ion-label>Grade Tracker</ion-label></ion-item
+      >
     </ion-list>
-
     <ion-list lines="none" class="bottom-list">
       <ion-item button color="light">
         <ion-icon name="settings-outline" slot="start"></ion-icon>
@@ -45,35 +40,64 @@
     </ion-list>
   </ion-content>
 </ion-menu>
+
 <div class="ion-page" id="main-content">
-  <ion-header>
+  <ion-header class="ion-no-border">
     <ion-toolbar color="danger">
       <ion-buttons slot="start">
-        <ion-menu-button class="btn-menu"></ion-menu-button>
+        <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title justify="center">Student Task Management</ion-title>
-      <ion-avatar slot="end" class="ion-img">
-        <img src="assets/icon/avatar.svg" alt="" />
-      </ion-avatar>
+      <ion-title>Dashboard</ion-title>
+      <ion-buttons slot="end">
+        <div class="theme-toggle" (click)="toggleTheme()">
+          <ion-icon
+            [name]="darkMode ? 'sunny-outline' : 'moon-outline'"
+          ></ion-icon>
+        </div>
+        <ion-avatar class="header-avatar">
+          <img src="assets/icon/avatar.svg" />
+        </ion-avatar>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content class="ion-padding">
-    <ion-card class="summary-card">
-      <div class="text-section">
-        <h1>Hii, Neha!</h1>
-        <p>You're completed 60% of your tasks today.</p>
+  <ion-content>
+    <div class="welcome-banner">
+      <div class="header-text">
+        <h1>Hii, Neha! 👋</h1>
+        <p>You've completed 60% of your tasks today.</p>
       </div>
-      <div class="progress-container">
+      <div class="progress-box">
         <div class="circular-progress">
           <div class="inner-circle">
             <span class="percentage">60%</span>
           </div>
         </div>
       </div>
-    </ion-card>
+    </div>
 
-    <div class="task-container">
+    <div class="action-grid">
+      <div class="action-item" routerLink="/add-task">
+        <div class="icon-circle red">
+          <ion-icon name="add-outline"></ion-icon>
+        </div>
+        <span>Add Task</span>
+      </div>
+      <div class="action-item">
+        <div class="icon-circle blue">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <span>Courses</span>
+      </div>
+      <div class="action-item">
+        <div class="icon-circle green">
+          <ion-icon name="hourglass-outline"></ion-icon>
+        </div>
+        <span>Focus</span>
+      </div>
+    </div>
+
+    <div class="task-container ion-padding">
       <h2>Today's Tasks</h2>
 
       @for (task of todayTasks; track task.title) {
@@ -84,51 +108,23 @@
       </ion-item>
       }
     </div>
-
-    <div class="quick-action">
-      <ion-title> Quick Actions </ion-title>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="4">
-            <ion-button expand="block" routerLink="/add-task"
-              >Add Task</ion-button
-            >
-          </ion-col>
-
-          <ion-col size="4">
-            <ion-button expand="block"> Courses </ion-button>
-          </ion-col>
-
-          <ion-col size="4">
-            <ion-button expand="block"> Focus </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
-
-    <div class="weekly">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Weekly Progress</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          <ion-progress-bar value="0.4"></ion-progress-bar>
-          <p>12 tasks completed this week</p>
-        </ion-card-content>
-      </ion-card>
-    </div>
-
-    <div class="focus">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Focus Timer</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <h2>25:00</h2>
-          <ion-button expand="block"> Start Study Session </ion-button>
-        </ion-card-content>
-      </ion-card>
+    <div class="focus-progress ion-padding">
+      <div class="stats-card">
+        <h3>Weekly Progress</h3>
+        <ion-progress-bar value="0.4"></ion-progress-bar>
+        <p><strong>12 tasks</strong> completed this week</p>
+      </div>
+      <div class="focus">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Focus Timer</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <h2>25:00</h2>
+            <ion-button expand="block"> Start Study Session </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
     </div>
   </ion-content>
 </div>

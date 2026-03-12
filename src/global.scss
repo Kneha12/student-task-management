@@ -34,4 +34,71 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import '@ionic/angular/css/palettes/dark.class.css';
+body.dark ion-card {
+  --background: #1e1e1e;
+}
+
+body.dark ion-item {
+  --background: #1e1e1e;
+}
+
+body.dark .summary-card {
+  background: #111;
+}
+  body.dark {
+
+  ion-menu ion-header ion-toolbar {
+    --background: #1a1a1a;
+  }
+
+  ion-menu ion-content {
+    --background: #121212;
+
+    ion-list-header {
+      --color: #f1f1f1;
+    }
+
+    ion-item {
+      --background: #1e1e1e;
+      --color: #ffffff;
+    }
+  }
+
+  .ion-page ion-content {
+    --background: #121212;
+  }
+
+  .summary-card {
+    background: #000;
+    color: #fff;
+  }
+
+  .task-container h2 {
+    color: #ffffff;
+  }
+.stats-card {
+
+background: #1f1f1f;
+h3{
+  color: white;
+}
+}
+
+  .quick-action ion-title {
+    color: #ffffff;
+  }
+
+
+  .focus ion-card {
+    background: #1e1e1e;
+  }
+  .focus ion-card-title{
+    color: #ffffff;
+  }
+
+  .inner-circle {
+    background: #222;
+  }
+
+}
