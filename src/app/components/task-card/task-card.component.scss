@@ -1,0 +1,45 @@
+.task-card {
+  border-radius: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  ion-item {
+    --background: transparent;
+    --padding-start: 12px;
+    --inner-padding-end: 12px;
+    align-items: center;
+  }
+
+  ion-label {
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 13px;
+      color: #b1afaf;
+      margin: 0;
+    }
+  }
+
+  ion-checkbox {
+    margin-right: 10px;
+  }
+
+  ion-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+}
+
+/* hover effect (nice for web preview) */
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}

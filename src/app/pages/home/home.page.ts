@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonMenu, IonButton, IonMenuButton, IonButtons, IonAvatar, IonLabel, IonList, IonItem, IonIcon, IonListHeader, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonMenu, IonButton, IonMenuButton, IonButtons, IonAvatar, IonLabel, IonList, IonItem, IonIcon, IonListHeader, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonGrid, IonRow, IonCol, IonProgressBar } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { TaskCardComponent } from '../../components/task-card/task-card.component';
 import { 
@@ -20,7 +20,7 @@ import {
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonCard, IonListHeader, IonIcon, IonList, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenu, IonMenuButton, IonAvatar, IonLabel, IonItem, TaskCardComponent, IonButton,IonGrid, IonRow, IonCol]
+  imports: [IonProgressBar, IonCard, IonListHeader, IonIcon, IonList, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenu, IonMenuButton, IonAvatar, IonLabel, IonItem, TaskCardComponent, IonButton, IonGrid, IonRow, IonCol, IonCardHeader, IonCardTitle, IonCardContent]
 })
 export class HomePage implements OnInit {
 todayTasks = [
