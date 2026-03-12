@@ -4,27 +4,46 @@
       <ion-title>Menu Content</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <ion-title>
-      <ion-toolbar>
-        <ion-label color="secondary">All List</ion-label>
-      </ion-toolbar>
-    </ion-title>
-    <ion-list>
-      <ion-item color="primary">
-        <ion-label>Assignment</ion-label>
-      </ion-item>
-       <ion-item>
-        <ion-label>Task</ion-label>
-      </ion-item>
-       <ion-item>
-        <ion-label>Deadline</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Profile</ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+  <ion-content>
+  <ion-list-header>
+    <ion-label>Academic</ion-label>
+  </ion-list-header>
+  <ion-list lines="none">
+    <ion-item button>
+      <ion-icon name="grid-outline" slot="start"></ion-icon>
+      <ion-label>Dashboard</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="book-outline" slot="start"></ion-icon>
+      <ion-label>Courses</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="calendar-number-outline" slot="start"></ion-icon>
+      <ion-label>Deadlines</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list-header>
+    <ion-label>Tools</ion-label>
+  </ion-list-header>
+  <ion-list lines="none">
+    <ion-item button>
+      <ion-icon name="timer-outline" slot="start"></ion-icon>
+      <ion-label>Focus Timer</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="stats-chart-outline" slot="start"></ion-icon>
+      <ion-label>Grade Tracker</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none" class="bottom-list">
+    <ion-item button color="light">
+      <ion-icon name="settings-outline" slot="start"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
   <ion-header>
@@ -34,11 +53,10 @@
       </ion-buttons>
       <ion-title justify="center">Student Task Management</ion-title>
       <ion-avatar slot="end" class="ion-img">
-        <img src="assets/icon/avatar.svg" alt="">
+        <img src="assets/icon/avatar.svg" alt="" />
       </ion-avatar>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    
-  </ion-content>
+  <ion-content> </ion-content>
+</div>

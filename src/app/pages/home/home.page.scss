@@ -1,12 +1,105 @@
-ion-header {
-  background: var(--ion-color-primary);
-  ion-toolbar {
-    ion-menu-button.btn-menu {
-      width: 80px;
-      height: 90px;
+
+$primary-gradient: linear-gradient(135deg, #ff416c, #ff4b2b);
+$item-bg: #ffffff;
+$border-radius-lg: 16px;
+
+ion-menu {
+  ion-header {
+    ion-toolbar {
+      --background: #{$primary-gradient};
+      --color: white;
+      --border-style: none;
+      height: 80px;
+      display: flex;
+      align-items: center;
     }
-    ion-avatar{
-      padding: 10px;
+  }
+
+  ion-content {
+    --background: #fdfdfd;
+    .menu-category-title {
+      padding: 24px 16px 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ion-color-medium);
+      align-items: center;
     }
+
+    ion-list-header{
+      --color:#111;
+    }
+    ion-list {
+      background: transparent;
+      padding: 12px;
+
+      ion-item {
+        --border-radius: 12px;
+        --padding-start: 12px;
+        margin-bottom: 6px;
+        font-weight: 500;
+        
+        &:hover, &.selected {
+          --background: rgba(115, 153, 244, 0.619);
+          --color: #ff416c;
+          font-weight: 700;
+        }
+
+        ion-label {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+.ion-page {
+  ion-header {
+    ion-toolbar {
+      --background: #{$primary-gradient};
+      --color: white;
+      --border-style: none;
+      height: 75px; 
+      
+      
+      ion-menu-button {
+        --color: white;
+        width: 60px;
+        height: 60px;
+      
+        ion-icon {
+          font-size: 34px !important; 
+          font-weight: bold;
+        }
+        &::part(native) {
+          padding: 0;
+        }
+      }
+
+      ion-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        padding-inline-start: 0; 
+      }
+
+      ion-avatar {
+        width: 42px;
+        height: 42px;
+        margin-right: 12px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        
+        img {
+          background: white;
+          padding: 2px;
+        }
+      }
+    }
+  }
+
+  ion-content {
+    --background: #f5f6f9; 
   }
 }
