@@ -23,9 +23,7 @@
               "browser": ""
             },
             "index": "src/index.html",
-            "polyfills": [
-              "src/polyfills.ts"
-            ],
+            "polyfills": ["src/polyfills.ts"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -33,7 +31,14 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
-              }
+              },
+              "src/favicon.ico",
+              "src/favicon-16x16.png",
+              "src/favicon-32x32.png",
+              "src/apple-touch-icon.png",
+              "src/android-chrome-192x192.png",
+              "src/android-chrome-512x512.png",
+              "src/site.webmanifest"
             ],
             "styles": ["src/global.scss", "src/theme/variables.scss"],
             "scripts": [],
@@ -129,9 +134,7 @@
     }
   },
   "cli": {
-    "schematicCollections": [
-      "@ionic/angular-toolkit"
-    ],
+    "schematicCollections": ["@ionic/angular-toolkit"],
     "analytics": false
   },
   "schematics": {
