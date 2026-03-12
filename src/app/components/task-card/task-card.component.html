@@ -1,3 +1,21 @@
-<p>
-  task-card works!
-</p>
+<ion-card class="task-card">
+  <ion-item lines="none">
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>
+      <h2>{{ task.title }}</h2>
+      <p>Deadline: {{ task.deadline }}</p>
+    </ion-label>
+    <ion-badge
+      slot="end"
+      [color]="
+        task.priority === 'High'
+          ? 'danger'
+          : task.priority === 'Medium'
+            ? 'warning'
+            : 'success'
+      "
+    >
+      {{ task.priority }}
+    </ion-badge>
+  </ion-item>
+</ion-card>
